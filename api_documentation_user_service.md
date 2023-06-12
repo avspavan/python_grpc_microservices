@@ -1,4 +1,4 @@
-Microservice 1 API Documentation:
+User Service API Documentation:
 
 CreateUser
 
