@@ -14,6 +14,15 @@ const onDidChangeTextDocument = async (event) => {
       // Call the server that has the microservice running and transfer the text read from the two files.
       const response = await callServer(paths);
 
+        // Parse the output from the server and display it in a more human-friendly format.
+ /** const results = JSON.parse(response);
+  const messages = results.messages.map((message) => {
+    return `Line ${message.line}: ${message.message}`;
+  });
+  vscode.window.showInformationMessage(messages.join("\n"));
+}*/
+
+
       // Save the output locally and also display it in the terminal.
       vscode.workspace.openTextDocument(response).then((document) => {
         document.save();
